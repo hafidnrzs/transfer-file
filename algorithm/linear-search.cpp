@@ -1,26 +1,27 @@
 #include <iostream>
 using namespace std;
 
-bool linearSearch(int, int, int[]);
+int LinearSearch(int[], int, int);
 
 int main() {
     int array[] = {1,5,6,9,2,8};
-    int size;
-    size = sizeof(array)/sizeof(array[0]);
-    int k = 6;
-    if (linearSearch(k, size, array))
-        cout << "Ketemu";
+    int size = sizeof(array)/sizeof(array[0]);
+    int key, position;
+
+    cout << "Input cari: "; cin >> key;
+    position = LinearSearch(array, size, key);
+    if (position == -1)
+        cout << "Elemen dicari tidak ketemu" << endl;
     else
-        cout << "Tidak ketemu";
+        cout << "Elemen dicari ada di indeks ke-" << position << endl;
     return 0;
 }
 
-bool linearSearch(int k, int s, int A[]) {
-    bool found = false;
+int LinearSearch(int array[], int size, int key) {
     int i;
-    for (i = 0; i < s; i++) {
-        if (A[i] == k)
-            return true;
+    for (i = 0; i < size; i++) {
+        if (array[i] == key)
+            return i;
     }
-    return 0;
+    return -1;
 }
