@@ -1,0 +1,7 @@
+1. karakteristik bubble sort: gelembung
+   membandingkan elemen dengan elemen setelahnya
+2. array, variable dengan elemen yang berdekatan
+3. array, maka perbandingan elemen menggunakan indeks
+
+tukar elemen:
+1. temp diisi dengan elemen pada posisi indeks terbesar yag dibandingkan
